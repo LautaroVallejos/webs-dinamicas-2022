@@ -5,9 +5,27 @@
     background: #202020;
 }
 
+.form-container {
+    display: flex;
+    width: 50%;
+    height: 3em;
+}
+
 .form{
     display: flex;
     flex-direction: column;
     background-color: #606060;
-    padding: 5em;
+    margin: 5em;
+}
+
+form > .inputf {
+    padding: 1em;
+    margin: 1em;
+    background-color: #101010;
+    display: flex;
+}
+
+#submit{
+    background-color: rgb(221, 21, 188);
+    text-shadow: 1em;
 }
