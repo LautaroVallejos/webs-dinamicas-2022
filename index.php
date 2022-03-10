@@ -12,8 +12,8 @@
     <!--Contenedor del Formulario-->
     <div class="container">
         <div class="form-container">
-            <h1 style="background-color: #606060; text-align: center;">Inicio de Sesion</h1>
             <form class="form" action="#" method="post">
+                <h1><i>Inicio de Sesion</i></h1>
                 <input class="inputf" type="text" name="user" placeholder="User">
                 <input class="inputf" type="password" name="passwd" placeholder="Password">
                 <input class="inputf" id="submit" name="send" type="submit" value="Iniciar Sesion">
@@ -27,6 +27,7 @@
             //Usuarios Validos
             $valid_users = array("admin"=>"admin123", "lvallejos"=>"antiperonista");
             $is_valid = 0;
+
             //Validacion de Usuario
             foreach($valid_users as $user => $pass){
                 if($_POST['user'] == $user && $_POST['passwd'] == $pass){
@@ -41,8 +42,9 @@
                 echo "Usuario incorrecto, revise su usuario y contraseña y reintentelo";
             }
 
-            //Siempre queda el resultado de la consulta anterior debajo del comentario
-        }
+            // Siempre queda el resultado de la consulta anterior debajo del comentario
+            // Para solucionarlo volver a cargar la url raiz
+        } 
         ?>
 </body>
 </html>

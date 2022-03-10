@@ -2,17 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: #202020;
+    background: #404040;
 }
 
-.container{
-    background-color: aqua;
+h1 > * {
+    background-color: #606060; 
+    text-align: center; 
+    text-shadow: 1px 1px 3px;
 }
 
 .form-container {
     display: flex;
-    width: 50%;
-    height: 3em;
+    justify-content:center;
 }
 
 .form{
@@ -20,16 +21,19 @@
     flex-direction: column;
     background-color: #606060;
     margin: 5em;
+    padding: 3em;
+    border-radius: .5em;
 }
 
 form > .inputf {
     padding: 1em;
     margin: 1em;
-    background-color: #101010;
+    background-color: #909090;
     display: flex;
+    border-radius: 1em;
 }
 
 #submit{
-    background-color: rgb(221, 21, 188);
-    text-shadow: 1em;
+    background-color: rgb(76, 233, 102);
+    text-shadow: 1px 1px 3px;
 }
