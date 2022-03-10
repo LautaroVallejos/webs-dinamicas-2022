@@ -5,6 +5,10 @@
     background: #202020;
 }
 
+.container{
+    background-color: aqua;
+}
+
 .form-container {
     display: flex;
     width: 50%;
