@@ -30,46 +30,28 @@
 
     <!-- Instrucciones Dinamicas -->
     <?php
-        //Productos en Stock
-        
-        
         if(isset($_POST['send'])){
+            //Productos en Stock
             $products = array("yerba" => 200, "mayonesa" => 100, "gaseosa" => 120, "don satur" => 80);
-            
             $product_exist = 0;
-            foreach($products as $product => $price){
 
+            foreach($products as $product => $price){
+            // Si hace match con un producto calcula el tota y lo devuelve
                 if($_POST['product'] == $product && isset($_POST['quantity'])){
                     $cant = $_POST['quantity'];
                     $total = $price * $cant;
-                    // echo "El producto es $product y el precio es $price";
                     echo "El total es de: $$total";
                     $product_exist = 1;
-                    break;
+                    break; // Una vez encuentra el producto corta del foreach
                 }
             }
 
+            // Si el producto existe retorna el total por pantalla, sino devuelve error
             if($product_exist == 1){
-                    echo "\nOperacion realizada exitosamente";
+                    echo "<br>Operacion realizada exitosamente";
             } else{
                     echo "Error, el producto no se encuetra diponible o la cantidad no ha sido ingresada";
             }
-
-
-        //Non-functional code
-        //====================================================================>
-            // foreach($products as $product => $price){
-            //     if(isset($_POST['product']) && isset($_POST['quantity'])){
-            //         $cant = $_POST['quantity'];
-            //         $total = $price * $cant;
-            //         $valid_item = 1;
-            //     } else {
-            //         $error = "Elemento no incluido en el inventario";
-            //     }
-            // }
-            
-            // echo "el valor total es: $total";
-        }
     ?>
 
 </body>
