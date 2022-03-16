@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: blueviolet;
+}
+
+.section{
+    display: inherit;
+    align-items: top;
+    margin: 3em;
+}
+
+.procesed-text{
+    text-align: center;
+}
+
+.label{
+    margin-right: 1.5em;
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+.text{
+    align-items: center;
+}
