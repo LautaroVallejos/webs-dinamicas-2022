@@ -5,41 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./main.css">
-    <title>Generador de </title>
+    <title>Calculadora</title>
 </head>
 <body>
     <!-- Contenedor del Formulario -->
     <div class="container">
         <form action="result.php" method="post">
-
-            <div class="section">
-                <label class="label" for="">Titulo de la Página</label>
-                <input type="text" name="title" required id="title-text" placeholder="Ingrese un titulo">
-            </div>
-            
-            <div class="section">
-                <label for="" class="label">Encabezado</label>
-                <input type="number" name="header" required id="header-number" placeholder="Encabezado del 1 - 6">
-            </div>
-            
-            <div class="section">
-                <label for="" class="label">Texto</label>
-                <textarea name="text-area" id="text-input" required placeholder="Ingrese un texto" cols="30" rows="10"></textarea>
+        <!-- Numero 1 -->
+            <div class="input-container">
+                <label for="" class="label">Numero 1</label>
+                <input class="number" type="number" name="numA" id="">
             </div>
 
-            <div class="section">
-                <label for="" class="label">Color</label>
-                <input type="color" name="font-color" id="">
+        <!-- Numero 2 -->
+            <div class="input-container">
+                <label for="" class="label">Numero 2</label>
+                <input class="number" type="number" name="numB" id="">
             </div>
 
-            <div class="section">
-                <input type="submit" value="Enviar" name="send" class="send">
+        <!-- Selector de Operacion -->
+            <div class="input-container">
+            <!--Sumar-->
+                <div class="operation">
+                    <input type="radio" name="op" value="1" id="suma">
+                    <label for="suma" class="sub-label">Sumar</label>
+                </div>
+
+            <!--Restar-->
+                <div class="operation">
+                    <input type="radio" name="op" value="2" id="resta">
+                    <label for="resta" class="sub-label">Restar</label>
+                </div>
+
+            <!--Multiplicar-->
+                <div class="operation">
+                    <input type="radio" name="op" value="3" id="mult">
+                    <label for="mult" class="sub-label">Multiplicar</label>
+                </div>
+                
+            <!-- Dividir -->
+                <div class="operation">
+                    <input type="radio" name="op" value="4" id="div">
+                    <label for="div" class="sub-lab">Dividir</label>
+                </div>
             </div>
-        
+
+        <!-- Enviar Peticion -->
+            <div class="input-container">
+                <input id="send" type="submit" name="send" value="Calcular">
+            </div>
         </form>
-    </div>
-
-    
+    </div>    
 
 </body>
 </html>

@@ -8,26 +8,43 @@
     <title><?php echo $_POST['title'] ?></title>
 </head>
 <body>
-    <!-- Instrucciones Dinamicas -->
+    <!-- Instrucciones Dinamicas -->  
     <?php
-        if(isset($_POST['title']) && isset($_POST['header']) && isset($_POST['text-area'])){
-            $title = $_POST['title'];
-            $header = $_POST['header'];
-            $text = $_POST['text-area'];
-            $color = $_POST['font-color'];
-            
-            echo "<h$header class='procesed-text'>
-            $title   <br>
-            </h$header>";
-            
-            echo "<p class='procesed-text'>$text</p>";
-        } else {
-            echo "Error alguno de los 3 campos fue no ingresado, intentelo nuevamente";
-        }
-        echo"<style>
-            .procesed-text{color: $color;}
-        </style>"
+        $numA = $_REQUEST['numA'];
+        $numB = $_REQUEST['numB'];
+        $opcion = $_REQUEST['op'];
+        $res;
 
+        if(isset($_POST['send'])){
+
+            if($opcion == 1){
+                $res = $numA + $numB;
+            }
+
+            if($opcion == 2){
+                $res = $numA - $numB;
+            }
+
+            if($opcion == 3){
+                $res = $numA * $numB;
+            }
+
+            if($opcion == 4){
+                if($numB == 0){
+                    $res = "Error, no es posible dividir entre 0.";
+                } else{
+                    $res = $numA / $numB;
+                }
+            }
+
+            switch($opcion){
+                case 1: echo "<h1>El resultado de la operacion es: $res</h1>"; break;
+                case 2: echo "<h1>El resultado de la operacion es: $res</h1>"; break;
+                case 3: echo "<h1>El resultado de la operacion es: $res</h1>"; break;
+                case 4: echo "<h1>El resultado de la operacion es: $res</h1>"; break;
+                default: echo "A ocurrido un error";break;
+            }
+        }
     ?>
 </body>
 </html>
