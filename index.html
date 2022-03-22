@@ -8,54 +8,102 @@
     <title>Calculadora</title>
 </head>
 <body>
-    <!-- Contenedor del Formulario -->
     <div class="container">
-        <form action="result.php" method="post">
-        <!-- Numero 1 -->
+        <form action="result.php" class="form" method="post">
+            <h1 class="h1">Formulario de perfil</h1>
+            <!-- Nombre y Apellido -->
             <div class="input-container">
-                <label for="" class="label">Numero 1</label>
-                <input class="number" type="number" name="numA" id="">
+                <input type="text" name="name" id="nombre" placeholder="Ingresar Nombre">
+                <input type="text" name="surname" id="apellido" placeholder="Ingresar Apellido">
             </div>
 
-        <!-- Numero 2 -->
+            <!-- Nombre de usuario -->
             <div class="input-container">
-                <label for="" class="label">Numero 2</label>
-                <input class="number" type="number" name="numB" id="">
+                <input type="text" name="user" id="usuario" placeholder="Ingrese Nombre De Usuario ">
             </div>
 
-        <!-- Selector de Operacion -->
+            <!-- Contraseña -->
             <div class="input-container">
-            <!--Sumar-->
-                <div class="operation">
-                    <input type="radio" name="op" value="1" id="suma">
-                    <label for="suma" class="sub-label">Sumar</label>
-                </div>
-
-            <!--Restar-->
-                <div class="operation">
-                    <input type="radio" name="op" value="2" id="resta">
-                    <label for="resta" class="sub-label">Restar</label>
-                </div>
-
-            <!--Multiplicar-->
-                <div class="operation">
-                    <input type="radio" name="op" value="3" id="mult">
-                    <label for="mult" class="sub-label">Multiplicar</label>
-                </div>
-                
-            <!-- Dividir -->
-                <div class="operation">
-                    <input type="radio" name="op" value="4" id="div">
-                    <label for="div" class="sub-lab">Dividir</label>
-                </div>
+                <input type="password" name="pass" id="contraseña" placeholder="Ingresar Contraseña">
             </div>
 
-        <!-- Enviar Peticion -->
+            <!-- Edad -->
             <div class="input-container">
-                <input id="send" type="submit" name="send" value="Calcular">
+                <input type="number" name="age" id="edad" min="1" max="100" placeholder="Ingrese su Edad">
+            </div>
+            
+            <!-- Sexo -->
+            <div class="input-container">
+                <input type="radio" name="sex" id="male" value="1">
+                <label for="male" class="label">Hombre</label>
+                <input type="radio" name="sex" id="female" value="2">
+                <label for="female" class="label">Mujer</label>
+            </div>
+
+            <!-- Cumpleaños -->
+            <div class="input-container">
+                <label for="cum" class="label">Cumpleaños</label>
+                <input type="date" name="birthday" id="cum">
+            </div>
+
+            <!-- Nacionalidad -->
+            <div class="input-container">
+                <label for="nacionalidad" class="label">Nacionalidad</label>
+                <select id="nacionalidad" name="nationality">
+                  <option value="arg">Argentino</option>
+                  <option value="uru">Uruguayo</option>
+                  <option value="chi">Chileno</option>
+                  <option value="otro">Otro</option>
+                </select> 
+            </div>
+
+            <!-- Color Favorito -->
+            <div class="input-container">
+                <label for="color" class="label">Color Favorito</label>
+                <input type="color" name="colour" id="color">
+            </div>
+
+            <!-- Correo Electronico -->
+            <div class="input-container">
+                <label for="mail" class="label">Correo Electronico</label>
+                <input type="email" name="email" id="mail">
+            </div>
+
+            <!-- Descripcion -->
+            <div class="input-container">
+                <label for="descripcion" class="label">Descripcion</label>
+                <textarea name="desc" id="descripcion" cols="30" rows="10" placeholder="Ingresar Descripcion"></textarea>
+            </div>
+
+            <!-- Hobbies -->
+            <div class="input-container">
+
+                <div class="checkbox">
+                    <label for="musica" class="label">Escuchar Musica</label>
+                    <input type="checkbox" name="hobbies[]" id="musica">
+                </div>
+
+                <div class="checkbox">
+                    <label for="juegos" class="label">Jugar Videojuegos</label>
+                    <input type="checkbox" name="hobbies[]" id="juegos">
+                </div>
+
+                <div class="checkbox">
+                    <label for="futbol" class="label">Jugar Futbol</label>
+                    <input type="checkbox" name="hobbies[]" id="futbol">
+                </div>
+
+                <div class="checkbox">
+                    <label for="correr" class="label">Salir a Correr</label>
+                    <input type="checkbox" name="hobbies[]" id="correr">
+                </div>
+
+            </div>
+
+            <div class="input-container">
+                <input type="submit" value="enviar">
             </div>
         </form>
-    </div>    
-
+    </div>
 </body>
 </html>
