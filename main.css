@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: 0;
+    font-family: 'Open Sans', sans-serif;
 }
-
+:root{
+    --colorTextos: #49454567;
+}
 .container{
     display: flex;
     justify-content: center;
@@ -13,16 +18,39 @@
     padding: 4em;
 }
 
-.input-container{
-    margin: 1.5em;
-    display: flex;
-    justify-content: center;
+form .input-container{
+    position: relative;
+    margin: 4em;
+
+}
+
+#hola{
+    margin-left: .5em;
+    margin-right: .5em;
+    font-size:2em;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .label{
+    color: var(--colorTextos);
     margin-right: 1.5em;
-    font-size: 1.3em;
+    font-size: 16px;
+    position: absolute;
     font-weight: bolder;
+}
+input{
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--colorTextos);
+}
+input:focus{
+    outline: none;
+    color: rgb(94,93,93);
 }
 
 .sub-label{
@@ -46,4 +74,18 @@
     width: 60%;
     padding: .7em;
     border-radius: 1em;
+}
+.h1{
+    text-align: center;
+    font-weight: 700;
+}
+form{
+    background-color: aliceblue;
+    padding: 40px 0;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+.form{
+    width: 100%;
+    margin: auto;
 }
