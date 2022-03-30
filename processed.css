@@ -1,0 +1,55 @@
+/* *{
+    $color:<?php echo $_REQUEST ['colour'] ?>; 
+} */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: #dbdbdb;
+}
+
+#navegation{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#title{
+    font-size: 3em;
+    margin-left: .9em;
+}
+
+.container{
+    background-color: #333C83;
+    padding: 2em;
+}
+
+.sub-container{
+    background-color: #22577E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    padding: 2em;
+    border-radius: 2em;
+    font-size: 1.2em;
+}
+
+.perfil-container{
+    background-color: #404040;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1em;
+    padding: 2em;
+    border-radius: 2em;
+}
+
+.sub-title{
+    font-size: 1.3em;
+    margin: .9em;    
+}
