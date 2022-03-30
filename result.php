@@ -30,10 +30,10 @@
     $description = $_REQUEST['desc'];
     $hobbies = $_REQUEST['hobbies'];
 
-    print_r($hobbies);
-
+    
+    // print_r($hobbies);
     // $send = $_REQUEST['send'];
-
+    
     // if(isset($send)){
         echo "<h1 class='h1'>El nombre seleccionado es $name</h1>";
         echo "<h1 class='h1'>El apellido seleccionado es $surname</h1>";

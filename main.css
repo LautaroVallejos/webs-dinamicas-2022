@@ -90,16 +90,23 @@ input:focus{
 }
 
 #send{
-    display: flex;
-    align-items: center;
-    background-color: aqua;
-    justify-self: center;
     text-align: center;
+    color: black;
+    background-color: #00f891;
+    justify-self: center;
     padding: 1em;
     width: 100%;
     border-radius: 1em;
+    font-size: 1.4em;
+    box-shadow:  2px 2px 5px black;
 }
 
+#send:hover{
+    background-color: #35CE8D;
+    box-shadow:  2px 3px 7px black;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
 .number{
     width: 60%;
     padding: .7em;
@@ -116,6 +123,11 @@ input:focus{
 .h1{
     text-align: center;
     font-weight: 700;
+}
+
+#color{
+    padding: 0;
+    height: 2em;
 }
 
 form{
