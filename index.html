@@ -5,15 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <title>Formulario de Archivo</title>
+    <title>Slider</title>
 </head>
 <body>
     <div class="main-container">
-        <form action="response.php" method="post" enctype="multipart/form-data">
-            <label class="label" for="">Etiqueta de ejemplo</label>
-            <input type="file" name="files" id="files-input">
-            <input type="submit" value="Subir documento" name="send">
-        </form>
+        <input type="radio" name="image-slide" id="1" hidden>
+        <input type="radio" name="image-slide" id="2" hidden>
+        <input type="radio" name="image-slide" id="3" hidden>
+
+        <!-- Slider  -->
+        <div class="slide">
+            <div class="slide-item">
+                <img src="./src/wall1.png" alt="error al cargar la imagen">
+            </div>
+            <div class="slide-item">
+                <img src="./src/wall2.png" alt="error al cargar la imagen">
+            </div>
+            <div class="slide-item">
+                <img src="./src/wall3.png" alt="error al cargar la imagen">
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <label class="pagination-item" for="1">
+                <img src="./src/wall1.png" alt="error al cargar la imagen">
+            </label>
+            <label class="pagination-item" for="2">
+                <img src="./src/wall2.png" alt="error al cargar la imagen">
+            </label>
+            <label class="pagination-item" for="3">
+                <img src="./src/wall3.png" alt="error al cargar la imagen">
+            </label>
+        </div>
     </div>
 </body>
 </html>
