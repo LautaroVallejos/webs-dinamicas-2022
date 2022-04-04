@@ -1,143 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-
 *{
-    padding: 0;
     margin: 0;
-    box-sizing: 0;
-    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #333C83;
 }
 
-:root{
-    --colorTextos: #49454567;
-}
-
-.input-container{
+.main-container > form{
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.container{
-    display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: blueviolet;
-    padding: 4em;
-}
-
-#nacionalidad{
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    height: 3em;
-}
-
-.input-container{
-    /* position: relative; */
+    justify-content: center;
+    padding: 1em;
     margin: 4em;
-
-}
-
-
-fieldset{
-    border: none;
-}
-
-#hola{
-    margin-left: .5em;
-    margin-right: .5em;
-    font-size:2em;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.label{
-    /* color: var(--colorTextos); */
-    text-align: center;
-    margin: 0em 1em;
-    font-size: 1em;
-    font-weight: bolder;
-}
-
-#descripcion{
-    width: 90%;
-    padding: 1em;
-}
-
-input{
-    background: none;
-    color: #c6c6c6;
-    font-size: 1.1em;
-    padding: 1em;
-    display: block;
-    width: 100%;
-    border: none;
-    border-bottom: 2.5px solid var(--colorTextos);
-}
-
-input:focus{
-    outline: none;
-    color: rgb(94,93,93);
-}
-
-.sub-label{
-    margin-left: 1em;
-}
-
-.operation{
-    margin: 1em;
-    display: flex;
-}
-
-#send{
-    text-align: center;
-    color: black;
-    background-color: #00f891;
-    justify-self: center;
-    padding: 1em;
-    width: 100%;
-    border-radius: 1em;
-    font-size: 1.4em;
-    box-shadow:  2px 2px 5px black;
-}
-
-#send:hover{
-    background-color: #35CE8D;
-    box-shadow:  2px 3px 7px black;
-    transition: all 0.5s ease;
-    cursor: pointer;
-}
-.number{
-    width: 60%;
-    padding: .7em;
-    border-radius: 1em;
-}
-
-.checkbox{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.h1{
-    text-align: center;
-    font-weight: 700;
-}
-
-#color{
-    padding: 0;
-    height: 2em;
-}
-
-form{
-    background-color: aliceblue;
-    padding: 2.5em 0em;
-    box-shadow: 4px 4px 7px #303030;
-    border-radius: 1em;
-}
-
-.form{
-    width: 100%;
-    margin: auto;
+    background-color: #F24A72;
 }
