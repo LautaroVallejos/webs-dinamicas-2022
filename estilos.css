@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 body{
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 30px;
+    background-color: #FAFDD6;
+    font-family: 'Open Sans', sans-serif;
 }
 
 img{
@@ -109,6 +112,43 @@ input[id="3"]:checked ~ .slide{
 
 input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     background: #fff;
+}
+
+.title{
+    text-align: center;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #46244C;
+    color: #DFDFDE;
+    text-shadow: 2px 2px 4px black;
+    padding: 3em 2em;
+    border-radius: 2em;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+    background-color: hsl(291, 56%, 35%);
+    padding: 1em;
+    border-radius: 1em;
+}
+
+label{
+    margin-bottom: .5em;
+    font-size: 1.3em;
+}
+
+.boton{
+   background-color: #F10086; 
+   padding: 1em;
+   border-radius: 1em;
 }
 
 
