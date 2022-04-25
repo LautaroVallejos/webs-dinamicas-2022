@@ -9,17 +9,32 @@
 </head>
 <body>
     <?php
+        require "./modulos/redimensionarImg.php";
+
         if(is_uploaded_file($_FILES['foto1']['tmp_name']) && 
         is_uploaded_file($_FILES['foto2']['tmp_name']) &&
         is_uploaded_file($_FILES['foto3']['tmp_name'])){
             $photo1 = $_FILES['foto1']['name'];
             move_uploaded_file($_FILES['foto1']['tmp_name'], $photo1);
+            
+            //Imagen renderizazda
+            $Photo1 = $nbr_img = redimensionarImg($photo1, 1920, 1080);
+            // unlink($Photo1);
 
             $photo2 = $_FILES['foto2']['name'];
             move_uploaded_file($_FILES['foto2']['tmp_name'], $photo2);
             
+            //Imagen renderizazda
+            $Photo2 = $nbr_img = redimensionarImg($photo2, 1366, 768);
+            // unlink($Photo2);
+
             $photo3 = $_FILES['foto3']['name'];
             move_uploaded_file($_FILES['foto3']['tmp_name'], $photo3);
+
+            //Imagen renderizazda
+            $Photo3 = $nbr_img = redimensionarImg($photo3, 1366, 768);
+            // unlink($Photo3);
+
         } else{
             echo "A ocurrido un error, las imagenes no fueron cargadas correctamente, verifique que los 3 campos esten completos";
         }
@@ -33,13 +48,13 @@
         <!-- Slider  -->
         <div class="slide">
             <div class="slide-item">
-                <img src="<?php echo $photo1?>" alt="error al cargar la imagen">
+                <img src="./src/<?php echo $Photo1?>" alt="error al cargar la imagen">
             </div>
             <div class="slide-item">
-                <img src="<?php echo $photo2?>" alt="error al cargar la imagen">
+                <img src="./src/<?php echo $Photo2?>" alt="error al cargar la imagen">
             </div>
             <div class="slide-item">
-                <img src="<?php echo $photo3?>" alt="error al cargar la imagen">
+                <img src="./src/<?php echo $Photo3?>" alt="error al cargar la imagen">
             </div>
         </div>
 
