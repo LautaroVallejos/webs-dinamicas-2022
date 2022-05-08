@@ -34,6 +34,12 @@
         echo "DB ready to operate\n";
     }
 
+    //Query
+    $productos = "productos";
+    $query = "INSERT INTO $productos VALUES(null, "Yerba Mate", "Cruz Malta");
+    $querySet = mysqli_query($connection, $query) ? print("Data has been recorded") : print("Query Error");
+
+    //Cerrar conexión
     $exitDB = mysqli_close($connection);
     if($exitDB){
         echo "DB connection finished";
