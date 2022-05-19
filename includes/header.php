@@ -8,6 +8,7 @@
 
     <!--Local Dependencies-->
     <link rel="stylesheet" href="./src/styles/globals.css">
+    <link rel="stylesheet" href="./src/styles/grid.css">
 
     <!--Dependencies-->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>

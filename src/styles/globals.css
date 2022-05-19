@@ -109,7 +109,7 @@
     width: 104%;
     height: 110%;
     left: -2%;
-    top: -5%; /* if the font is 'Oswald'*/
+    top: -5%;
     border-radius: 50px;
     transform: scaleY(0);
     z-index: -1;
@@ -177,7 +177,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
   }
 
   .input-tasks{   

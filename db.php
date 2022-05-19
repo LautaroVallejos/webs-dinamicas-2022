@@ -1,4 +1,6 @@
 <?php
+
+    session_start();
     /** Server Connection */
     $server = 'localhost';
     $user = 'root';
@@ -15,7 +17,7 @@
     
     /** Server Validation */
     if(isset($db)){
-        echo "Connection with DB Succefully <br>";
+       // echo "Connection with DB Succefully <br>";
     } else {
         echo "Error to connect DB: \n".mysqli_error();
     }
@@ -25,7 +27,7 @@
 
     /** DB Validation */
     if(isset($selectDB)){
-        echo "DataBase selected: <b>$dbName</b>";
+       // echo "DataBase selected: <b>$dbName</b>";
     } else {
         echo "\nError to select DB".mysqli_error();
     }
