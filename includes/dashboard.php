@@ -21,22 +21,16 @@
 			<div class="header__item"><a id="losses" class="filter__link filter__link--number" href="#">Fecha de Creación</a></div>
 		</div>
 		<div class="table-content">			
-		<?php
-			for($i=0; $i<count($logsA); $i++){
-		?>
-			<div class="table-row">
+		
 			<?php
-				foreach($logs as $log){
-			?>
-					<span class='table-data'><?php print_r($logs['id']);?></span>
-					<span class='table-data'><?php print_r($logs['title']);?></span>
-					<span class='table-data'><?php print_r($logs['description']);?></span>
-					<span class='table-data'><?php print_r($logs['created_at']);?></span>
-			<?php break; }; ?> <!--Si se saca el break se rompe-->
-				</div>
-		<?php };?>
-			
-			
+					while($data = mysqli_fetch_assoc($querySet)){?>
+						<div class="table-row">
+							<span class="table-data"><?php echo $data['id']?></span>
+							<span class="table-data"><?php echo $data['title']?></span>
+							<span class="table-data"><?php echo $data['description']?></span>
+							<span class="table-data"><?php echo $data['created_at']?></span>
+						</div>
+					<?php };?>
 		</div>	
 	</div>
 </div>

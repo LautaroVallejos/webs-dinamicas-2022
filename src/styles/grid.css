@@ -8,6 +8,7 @@
 	justify-content:center;
 	align-items:center;
 	min-height:100vh;
+	/* margin: 1em; */
 }
 
 .table{
@@ -15,6 +16,7 @@
 	border:2px solid #202020;
     border-radius: .2em;
 	display: grid;
+	margin: 1em;
 }
 
 .table-header {
@@ -40,16 +42,17 @@
 	 text-align: center;
 	align-items: center;
 	flex-flow: row;
-	background-color: rebeccapurple;
+	background-color: #FEF9A7;
 }
 
 .table-data{
 	display: grid;
 	justify-self: center;
-	border: 1px solid black;
+	/* border: 1px solid black; */
 	align-items: center;
 	grid-auto-flow: column;
 	width: 100%;
+	padding: .5em;
 }
 
 .header__item {
