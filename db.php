@@ -17,7 +17,7 @@
     
     /** Server Validation */
     if(isset($db)){
-       // echo "Connection with DB Succefully <br>";
+        // echo "Connection with DB Succefully <br>";
     } else {
         echo "Error to connect DB: \n".mysqli_error();
     }

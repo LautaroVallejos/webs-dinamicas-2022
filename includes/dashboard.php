@@ -4,6 +4,14 @@
     $logs = mysqli_fetch_assoc($querySet);
 	$logsA = mysqli_fetch_array($querySet);
 ?>
+
+<?php
+	// while($row = mysqli_fetch_array($querySet)){
+	// Testing Code
+	// }
+?>
+
+<!-- Dashboard -->
 <div class="grid-container">
 	<div class="table">
 		<div class="table-header">
@@ -12,41 +20,24 @@
 			<div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Descripción</a></div>
 			<div class="header__item"><a id="losses" class="filter__link filter__link--number" href="#">Fecha de Creación</a></div>
 		</div>
-		<div class="table-content">	
-
+		<div class="table-content">			
+			
+			<?php
+			for($i=0; $i<count($logsA); $i++){
+				?>
 			<div class="table-row">
 				<?php
-					foreach($logs as $log => $data){
-						echo "<div id='dinamics'class='table-row'>";
-						?>
-						<?php
-							echo '<div class="table-data">'.$data.'</div>';
-						echo "</div>";
-					}
+				foreach($logs as $log){
 				?>
-			</div>
+					<span class='table-data'><?php print_r($logs['id']);?></span>
+					<span class='table-data'><?php print_r($logs['title']);?></span>
+					<span class='table-data'><?php print_r($logs['description']);?></span>
+					<span class='table-data'><?php print_r($logs['created_at']);?></span>
+				<?php break; } ?>
+				</div>
+				<?php };?>
 			
-			<div class="table-row">		
-				<div class="table-data">Tom</div>
-				<div class="table-data">2</div>
-				<div class="table-data">0</div>
-				<div class="table-data">1</div>
-				<div class="table-data">5</div>
-			</div>
-			<div class="table-row">
-				<div class="table-data">Dick</div>
-				<div class="table-data">1</div>
-				<div class="table-data">1</div>
-				<div class="table-data">2</div>
-				<div class="table-data">3</div>
-			</div>
-			<div class="table-row">
-				<div class="table-data">Harry</div>
-				<div class="table-data">0</div>
-				<div class="table-data">2</div>
-				<div class="table-data">2</div>
-				<div class="table-data">2</div>
-			</div>
+			
 		</div>	
 	</div>
 </div>

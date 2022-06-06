@@ -29,22 +29,18 @@
 
 .table-content{
 	display: grid;
-	text-align: center;
+	justify-items: stretch;
+	/* text-align: center; */
 }
 
 .table-row{
-    display: grid;
-	text-align: center;
-	grid-template-columns: repeat(1, auto);
-	justify-items: center;
+     display: flex;
+	 text-align: center;
+	 justify-content: space-between;
+	 text-align: center;
 	align-items: center;
-    flex-direction: row;
-	grid-auto-flow: row;
-	align-content: space-between;
-    /* justify-content: space-between; */
-    width: 100%;
-    padding: 1em;
-    background-color: #FAF0D7;
+	flex-flow: row;
+	background-color: rebeccapurple;
 }
 
 .table-data{
@@ -53,9 +49,7 @@
 	border: 1px solid black;
 	align-items: center;
 	grid-auto-flow: column;
-	margin:0 1em ;
 	width: 100%;
-	/* background-color: rebeccapurple; */
 }
 
 .header__item {
