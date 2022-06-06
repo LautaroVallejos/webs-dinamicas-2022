@@ -21,21 +21,20 @@
 			<div class="header__item"><a id="losses" class="filter__link filter__link--number" href="#">Fecha de Creación</a></div>
 		</div>
 		<div class="table-content">			
-			
-			<?php
+		<?php
 			for($i=0; $i<count($logsA); $i++){
-				?>
+		?>
 			<div class="table-row">
-				<?php
+			<?php
 				foreach($logs as $log){
-				?>
+			?>
 					<span class='table-data'><?php print_r($logs['id']);?></span>
 					<span class='table-data'><?php print_r($logs['title']);?></span>
 					<span class='table-data'><?php print_r($logs['description']);?></span>
 					<span class='table-data'><?php print_r($logs['created_at']);?></span>
-				<?php break; } ?>
+			<?php break; }; ?> <!--Si se saca el break se rompe-->
 				</div>
-				<?php };?>
+		<?php };?>
 			
 			
 		</div>	
