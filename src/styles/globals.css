@@ -147,6 +147,10 @@
   .anya{
     max-width: 33%;
   }
+
+  .giyu{
+    max-width: 20%;
+  }
   
   @keyframes rotate {
     0%{

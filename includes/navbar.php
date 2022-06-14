@@ -10,9 +10,8 @@
             <!--Collapse Menu-->
             <div class="wrapper">
                 <ul>
-                    <li><a href="#">Añadir Tarea</a></li>
                     <li><a href="#">Actualizar Tareas</a></li>
-                    <li><a href="#">Eliminar Tareas</a></li>
+                    <li><a href="delete-tasks.php">Eliminar Tareas</a></li>
                 </ul>
             </div>
     </div>
