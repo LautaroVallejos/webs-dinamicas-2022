@@ -25,8 +25,8 @@
 							<span class="table-data"><?php echo $data['description']?></span>
 							<span class="table-data"><?php echo $data['created_at']?></span>
 							<span class="table-data">
-								<a href="includes/update-item.php?update=<?php echo $data['id']?>" class="delete">Eliminar</a>
-								<a href="dashboard.php?delete=<?php echo $data['id']?>" class="update">Modificar</a>
+								<a href="update-tasks.php?update=<?php echo $data['id']?>" class="update">Modificar</a>
+								<a href="dashboard.php?delete=<?php echo $data['id']?>" class="delete">Eliminar</a>
 							</span>
 						</div>
 					<?php };?>
@@ -36,6 +36,6 @@
 
 <?php
 	if(isset($_GET['update'])){
-		include('./update-item.php');
+		include('./update-task.php');
 	}
 ?>
